@@ -1,0 +1,264 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fullscreen Space Background */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, #020024 20%, #000 80%);
+    overflow: auto;
+    position: relative;
+    overflow-x: hidden;
+    
+}
+
+/* Star Background */
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    overflow: hidden;
+}
+
+/* Star Animation */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    opacity: 0.8;
+    animation: twinkle 5s infinite alternate ease-in-out;
+}
+
+/* Twinkling Animation */
+@keyframes twinkle {
+    0% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background: rgba(34, 34, 34, 0.9);
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: #4CAF50;
+
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    position: sticky;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+    border-bottom: 1px solid white;
+}
+
+.hamburger {
+    font-size: 26px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #222;
+        text-align: center;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Centered Earth */
+.earth {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg') no-repeat center/cover;
+    border-radius: 50%;
+    box-shadow: 0 0 60px rgba(0, 150, 255, 0.9);
+    animation: rotateEarth 30s linear infinite;
+}
+
+/* Rotating Earth Effect */
+@keyframes rotateEarth {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Circular Orbit */
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* DevOps Tool Logos */
+.devops-tool {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+}
+
+/* Positioning DevOps Tools */
+.moon {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/e/e9/Jenkins_logo.svg') no-repeat center/contain;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.moon-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: orbitMoon 6s linear infinite;
+}
+
+.moon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg') no-repeat center/cover;
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+/* Responsive Adjustments */
+@keyframes orbitMoon {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg)
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg)
+    }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .earth {
+        width: 120px;
+        height: 120px;
+    }
+
+    .moon-orbit {
+        width: 240px;
+        height: 240px;
+    }
+
+    .moon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .earth {
+        width: 100px;
+        height: 100px;
+    }
+
+    .moon-orbit {
+        width: 200px;
+        height: 200px;
+    }
+
+    .moon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+.hero-content {
+    max-width: 450px;
+    --color-primary: var(--white);
+    color: #4CAF50;
+    font-size: 30px;
+    top: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
