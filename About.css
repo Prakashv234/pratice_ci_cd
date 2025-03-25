@@ -1,0 +1,374 @@
+.About-me {
+    width: 100%;
+    height: auto;
+}
+
+.About-me h1 span {
+    font-size: 20px;
+}
+
+.body-content {
+    padding: 15px 15%;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 100%;
+    color: aliceblue;
+}
+
+.body-content div {
+    height: auto;
+}
+
+.heading-contetn {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #4CAF50;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+}
+
+.timeline {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Left Vertical Line - Initially Hidden */
+.timeline-line {
+    position: absolute;
+    left: 22px;
+    top: 0;
+    width: 4px;
+    height: 0;  /* Start with no height */
+    background: linear-gradient(180deg, #00f2ff, #007bff);
+    transition: height 1s ease-in-out;
+}
+
+/* Timeline Item */
+.timeline-item {
+    display: flex;
+    align-items: center;
+    opacity: 0.3;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 50px;
+}
+
+/* Active Timeline Item */
+.timeline-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Moving Circle */
+.timeline-circle {
+    position: absolute;
+    left: 8px;
+    width: 30px;
+    height: 30px;
+    background: #ffcc00;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+    transition: top 1s ease-in-out;
+}
+
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background: #333;
+    border: 3px solid #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+/* .content {
+    background: #333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+} */
+
+.timeline-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Contact Section */
+.Contact {
+    display: grid;
+    background: transparent;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 50px;
+    color: white;
+}
+
+/* Left Side Content */
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.section-title {
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.section-subtitle {
+    color: #4CAF50;
+    text-transform: uppercase;
+}
+
+.contact-social-list {
+    margin-top: 30px;
+    display: flex;
+    gap: 50px;
+}
+
+.section-text {
+    /* font-size: clamp(1rem, 1.5vw, 1.2rem); */
+    opacity: 0.8;
+}
+
+/* Contact List */
+.contact-list {
+    display: grid;
+    gap: 15px;
+}
+
+.contact-info {
+    text-decoration: none;
+}
+
+.contact-item-icon {
+    color: #4CAF50;
+}
+
+.contact-list-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.contact-info {
+    color: #bbb;
+}
+
+/* Right Side Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+/* Input Fields */
+.input-wrapper {
+    position: relative;
+}
+
+.input-field {
+    width: 100%;
+    /* background: var(--input-bg); */
+    background-color: transparent;
+    color: var(--raw-seinna);
+    padding: 10px;
+    padding-left: 40px;
+    border-radius: var(--radius-12);
+    transition: var(--transition-1);
+}
+
+textarea.input-field {
+    min-height: 60px;
+    height: 120px;
+    max-height: 200px;
+    resize: vertical;
+}
+
+.input-field:focus {
+    outline: 1px solid;
+}
+
+.input-field:focus+ion-icon {
+    color: var(--raw-seinna);
+}
+
+.input-wrapper ion-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #bbb;
+}
+
+/* Button */
+.btn-primary {
+    background: #4CAF50;
+    color: white;
+    width: 100%;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+.tooltip {
+    display: none;
+    /* Hide tooltip by default */
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* .contact-social-link:hover .tooltip {
+    display: block;
+    transform: scale(1.05);
+} */
+
+.contact-social-link {
+    position: relative;
+    font-size: 24px;
+    color: #4CAF50;
+}
+
+.contact-social-link>i:hover {
+    transform: scale(1.50);
+}
+
+.iconcontact {
+    list-style-type: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .Contact {
+        grid-template-columns: 1fr;
+        padding: 40px;
+        gap: 20px;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .Contact {
+        padding: 30px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .input-field {
+        font-size: 0.95rem;
+        padding: 10px 40px 10px 15px;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+/*-----------------------------------*\
+   * #FOOTER
+  \*-----------------------------------*/
+
+.footer {
+    border-top: 1px solid wheat;
+    background: var(--bg-secondary);
+    padding-block: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-1);
+}
+
+.footer .logo {
+    margin-bottom: 15px;
+    margin-bottom: 0;
+
+}
+
+.footer .logo a {
+    color: #4CAF50;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.copyright {
+    color: var(--color-secondary);
+    line-height: 1.6;
+}
+
+.copyright a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--raw-seinna);
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*-----------------------------------*\
+   * #GO TO TOP
+  \*-----------------------------------*/
+
+.go-top {
+    position: fixed;
+    bottom: 35px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+    color: #4CAF50;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    opacity: 2;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: var(--transition-1);
+    /* z-index: 2; */
+}
+
+.go-top.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+}
